@@ -1,5 +1,4 @@
 name = "parsing-queries-blog"
 compatibility_date = "2024-09-29"
 
-[site]
-bucket = "./build"
+pages_build_output_dir = "./build"
