@@ -1,1 +1,1 @@
-https://parsing-queries-blog.pages.dev/
+https://issamohamed.com
