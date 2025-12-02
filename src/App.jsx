@@ -127,6 +127,52 @@ export default function BlogPage() {
             marginBottom: '1rem',
             fontWeight: 400
           }}>
+            The Moderation Paradox: Anonymity, and the Limits of Automated Oversight
+          </h2>
+          <div style={{
+            fontFamily: 'Georgia, serif',
+            textAlign: 'center',
+            color: 'rgba(255, 255, 255, 0.9)',
+            fontSize: '1.25rem',
+            marginBottom: '2rem'
+          }}>
+            December 2, 2025
+          </div>
+          <div style={{
+            backdropFilter: 'blur(12px)',
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '1rem',
+            padding: '2rem',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}>
+            <div style={{
+              color: 'rgba(255, 255, 255, 0.9)',
+              lineHeight: '1.75',
+              fontSize: '1.05rem'
+            }}>
+              <p style={{ marginBottom: '1rem' }}>
+                Today I want to touch base on something that's been on my mind lately, a topic I keep returning to whenever I think about the state of online spaces and the invisible labor that keeps them functional, this question of content moderation and why, no matter how sophisticated our AI systems become, no matter how many billions we pour into machine learning models designed to detect hate speech and violence and the darkest corners of human expression, we still haven't managed to relieve the burden from what some have called "the janitors of the internet," those human moderators who spend their days, often for barely livable wages, sifting through the digital sewage of humanity so that the rest of us can scroll through our feeds without stumbling upon something that would haunt us for weeks.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                The moral calculus here troubles me deeply, because we've essentially created a system where protecting the mental health of millions requires sacrificing the mental health of thousands, where the price of a sanitized internet experience is paid by real people who develop PTSD, depression, and lasting psychological damage from their daily exposure to child exploitation material, graphic violence, and the concentrated hatred that humans are capable of producing when given anonymity and a keyboard. And yet, despite this human cost, we can't simply hand the job over to algorithms, because automated moderation fails in ways that are both predictable and profoundly difficult to solve, it lacks what I can only describe as cultural fluency, that intuitive understanding of when something crosses from edgy humor into genuine harm, when a phrase that looks innocuous is actually a dog whistle understood only by those it's meant to reach.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                Social media platforms have discovered, often through spectacular public failures, that context is everything and context is precisely what AI struggles to grasp. The same words can be reclamation or slur depending on who's speaking, the same image can be documentation or glorification depending on intent, and the ever-evolving lexicon of hate, where communities develop shorthand, inside jokes, and coded language specifically designed to evade detection, means that any trained model is perpetually playing catch-up against human creativity deployed toward malicious ends. Reddit's approach of community-specific moderators acknowledges this reality, recognizing that someone embedded in a community can read the room in ways an algorithm simply cannot, but this solution introduces its own troubling questions: if moderators are anonymous participants in the communities they police, what prevents the fox from guarding the henhouse, what stops someone who shares a community's hateful beliefs from selectively enforcing rules to protect their ideological allies while punishing outsiders?
+              </p>
+            </div>
+          </div>
+        </article>
+        {/* Article 1 */}
+        <article style={{ marginBottom: '4rem' }}>
+          <h2 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: 'clamp(3rem, 8vw, 5rem)',
+            color: 'white',
+            textAlign: 'center',
+            marginBottom: '1rem',
+            fontWeight: 400
+          }}>
             Incognito Mode: Perception of Online Privacy vs. Platform Reality
           </h2>
           <div style={{
