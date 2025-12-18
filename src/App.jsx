@@ -1,7 +1,28 @@
-import React from 'react';
-import { Github, Linkedin, Twitter, Facebook, Music, Instagram } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Github, Linkedin, Twitter, Facebook, Music, Instagram, X } from 'lucide-react';
 
 export default function BlogPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Check if user has already dismissed the popup
+    const hasSeenPopup = localStorage.getItem('hasSeenSubscribePopup');
+    
+    if (!hasSeenPopup) {
+      // Show popup after 3 seconds
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 3000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    localStorage.setItem('hasSeenSubscribePopup', 'true');
+  };
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -411,6 +432,141 @@ export default function BlogPage() {
           </div>
         </article>
       </div>
+
+      {/* Subscription Popup */}
+      {showPopup && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 100,
+          padding: '1rem'
+        }}>
+          <div style={{
+            background: '#1a2b4c',
+            borderRadius: '1rem',
+            padding: '2rem',
+            maxWidth: '500px',
+            width: '100%',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
+            position: 'relative'
+          }}>
+            {/* Close button */}
+            <button
+              onClick={handleClosePopup}
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                background: 'none',
+                border: 'none',
+                color: 'rgba(255, 255, 255, 0.7)',
+                cursor: 'pointer',
+                padding: '0.25rem',
+                display: 'flex',
+                alignItems: 'center',
+                transition: 'color 0.2s'
+              }}
+              onMouseOver={e => e.currentTarget.style.color = 'white'}
+              onMouseOut={e => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)'}
+            >
+              <X size={24} />
+            </button>
+
+            {/* Content */}
+            <h3 style={{
+              fontFamily: 'Georgia, serif',
+              fontSize: '1.75rem',
+              color: 'white',
+              marginBottom: '1rem',
+              fontWeight: 400
+            }}>
+              Stay Updated
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.9)',
+              lineHeight: '1.6',
+              marginBottom: '1.5rem',
+              fontSize: '1rem'
+            }}>
+              Subscribe to receive timely updates whenever I publish new content.
+            </p>
+            <div style={{
+              display: 'flex',
+              gap: '1rem',
+              flexWrap: 'wrap'
+            }}>
+              <a
+                href="https://groups.google.com/g/parsing_queries"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  flex: '1',
+                  minWidth: '150px',
+                  textAlign: 'center',
+                  background: 'rgba(255, 255, 255, 0.15)',
+                  color: 'white',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  textDecoration: 'none',
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '1rem',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  transition: 'all 0.2s',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.25)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                Join Google Group
+              </a>
+              <a
+                href="https://substack.com/@issamohamed"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  flex: '1',
+                  minWidth: '150px',
+                  textAlign: 'center',
+                  background: 'rgba(255, 255, 255, 0.15)',
+                  color: 'white',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  textDecoration: 'none',
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '1rem',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  transition: 'all 0.2s',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.25)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={e => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                Join my Substack
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
