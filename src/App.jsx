@@ -124,7 +124,7 @@ export default function BlogPage() {
       <div style={{ maxWidth: '72rem', margin: '0 auto', marginBottom: '4rem', textAlign: 'center' }}>
         <img 
           src="/images/blog_profile_pic.webp" 
-          alt="Issa Mohamed"
+          alt="Picture of the Author: Issa Mohamed"
           style={{
             width: '400px',
             height: '300px',
