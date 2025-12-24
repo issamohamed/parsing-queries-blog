@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Twitter, Facebook, Music, Instagram, X } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Github, Linkedin, Twitter, Facebook, Music, Instagram, X, ChevronUp } from 'lucide-react';
 
 export default function BlogPage() {
   const [showPopup, setShowPopup] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const firstArticleRef = useRef(null);
 
   useEffect(() => {
     // Check if user has already dismissed the popup
@@ -18,9 +20,25 @@ export default function BlogPage() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (firstArticleRef.current) {
+        const articleBottom = firstArticleRef.current.getBoundingClientRect().bottom;
+        setShowBackToTop(articleBottom < 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleClosePopup = () => {
     setShowPopup(false);
     localStorage.setItem('hasSeenSubscribePopup', 'true');
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -139,7 +157,7 @@ export default function BlogPage() {
       {/* Blog Articles */}
       <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
         {/* Article 1 */}
-        <article style={{ marginBottom: '4rem' }}>
+        <article ref={firstArticleRef} style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
             fontSize: 'clamp(3rem, 8vw, 5rem)',
@@ -432,6 +450,43 @@ export default function BlogPage() {
           </div>
         </article>
       </div>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: '2rem',
+            right: '2rem',
+            width: '48px',
+            height: '48px',
+            borderRadius: '50%',
+            background: 'rgba(255, 255, 255, 0.15)',
+            border: '1px solid rgba(255, 255, 255, 0.3)',
+            backdropFilter: 'blur(12px)',
+            color: 'white',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'all 0.3s ease',
+            zIndex: 60,
+            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+          }}
+          onMouseOver={e => {
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.25)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+          aria-label="Back to top"
+        >
+          <ChevronUp size={24} />
+        </button>
+      )}
 
       {/* Subscription Popup */}
       {showPopup && (
