@@ -7,15 +7,11 @@ export default function BlogPage() {
   const firstArticleRef = useRef(null);
 
   useEffect(() => {
-    // Check if user has already dismissed the popup
     const hasSeenPopup = localStorage.getItem('hasSeenSubscribePopup');
-    
     if (!hasSeenPopup) {
-      // Show popup after 3 seconds
       const timer = setTimeout(() => {
         setShowPopup(true);
       }, 3000);
-      
       return () => clearTimeout(timer);
     }
   }, []);
@@ -27,7 +23,6 @@ export default function BlogPage() {
         setShowBackToTop(articleBottom < 0);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -88,7 +83,6 @@ export default function BlogPage() {
             }}></div>
           </div>
           
-          {/* Social Links under title */}
           <div style={{
             display: 'flex',
             justifyContent: 'center',
@@ -135,10 +129,8 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Spacer */}
       <div style={{ height: '10rem' }}></div>
 
-      {/* Profile Image */}
       <div style={{ maxWidth: '72rem', margin: '0 auto', marginBottom: '4rem', textAlign: 'center' }}>
         <img 
           src="/images/blog_profile_pic.webp" 
@@ -154,10 +146,65 @@ export default function BlogPage() {
         />
       </div>
 
-      {/* Blog Articles */}
       <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-        {/* Article 1 */}
+        {/* NEW Article - Price Personalization */}
         <article ref={firstArticleRef} style={{ marginBottom: '4rem' }}>
+          <h2 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: 'clamp(3rem, 8vw, 5rem)',
+            color: 'white',
+            textAlign: 'center',
+            marginBottom: '1rem',
+            fontWeight: 400
+          }}>
+            Price Personalization: The Paywall You Saw Coming
+          </h2>
+          <div style={{
+            fontFamily: 'Georgia, serif',
+            textAlign: 'center',
+            color: 'rgba(255, 255, 255, 0.9)',
+            fontSize: '1.25rem',
+            marginBottom: '2rem'
+          }}>
+            January 5, 2026
+          </div>
+          <div style={{
+            backdropFilter: 'blur(12px)',
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '1rem',
+            padding: '2rem',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}>
+            <div style={{
+              color: 'rgba(255, 255, 255, 0.9)',
+              lineHeight: '1.75',
+              fontSize: '1.05rem'
+            }}>
+              <p style={{ marginBottom: '1rem' }}>
+                I've been thinking a lot lately about the strange emotional contract we unknowingly sign when we adopt a new service in its early days, back when everything feels generous and almost too good to be true; and I find myself wondering if the eventual sting of price personalization hurts so much not because of the money itself, but because of what that money represents: the dissolution of a relationship we thought was built on mutual benefit.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                There's something uniquely powerful about discovering a product that works beautifully and asks for almost nothing in return. Outside of general marketing practice, when a company releases something genuinely useful and keeps it accessible and flexible, a quiet transformation begins to take place within the user. It's not just trust that develops; it's something closer to pride, this internal narrative that whispers, "hey, I'm using such a valuable resource with little to no caveats." You start to feel like you've found a secret, like you've beaten the system somehow, and that feeling becomes part of your identity as a user of that service.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                So when the demand is confirmed and the price point inevitably spikes, when the dreaded tiered subscriptions start appearing like unwelcome guests, something peculiar happens beyond the general disdain of having to pay more for what you were doing freely just a week ago. An odd phenomenon emerges in which users power through the paywall with a motivation that runs deeper than mere dependence: it's the nostalgia of the app's original state, the memory of how much of a service it was to you, even if the current version, bloated by common corporate greed, has begun to cut corners and perform noticeably worse. The thing is, even when we notice the decline, we don't acknowledge it as much as we'd like to admit; we've already invested too much of ourselves into the relationship.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                What's really the solution here? Should we incentivize wary users to clear their caches during the early days of a service's lifecycle before the makers can weaponize that information against them? But isn't that early cache data precisely what allows the app to improve and personalize the user's experience in the first place? This toxic dynamic only amplifies complaints rooted in the dread of having no way to enjoy the app without conforming to whatever terms the company dictates.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                On the other hand, I find myself unable to ignore the perspective of these early stage companies who treat their product like a newborn they've had financially babysat by initial investors. There's a certain point at which we have to acknowledge that those "flexible" elements of their service might be costing them considerable money; they're gambling on gaining a trusted user base. Once accomplished, they've likely promised those investors a plan to monetize the service and recoup some of that initial faith. This is excusable as basic good practice from a business standpoint.
+              </p>
+              <p>
+                However, it becomes an entirely different case when prices and paywalls multiply not out of necessity but out of opportunism: the company realizing they've become the sole provider of said service, feeding deliberately from the reliance and desperation of customers who have nowhere else to turn. The line between sustainable business and exploitation is thin, and I suspect most companies know exactly when they've crossed it; they simply choose not to care, because by then, we're already too attached to leave.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        {/* Article - The Moderation Paradox */}
+        <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
             fontSize: 'clamp(3rem, 8vw, 5rem)',
@@ -211,7 +258,8 @@ export default function BlogPage() {
             </div>
           </div>
         </article>
-        {/* Article 1 */}
+
+        {/* Article - Incognito Mode */}
         <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -270,7 +318,7 @@ export default function BlogPage() {
           </div>
         </article>
 
-        {/* Article 2 */}
+        {/* Article - Voice of Reason(ing) */}
         <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -332,7 +380,7 @@ export default function BlogPage() {
           </div>
         </article>
 
-        {/* Article 3 */}
+        {/* Article - GlassMorphism */}
         <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -385,7 +433,7 @@ export default function BlogPage() {
           </div>
         </article>
 
-        {/* Article 4 */}
+        {/* Article - Playlists */}
         <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
@@ -513,7 +561,6 @@ export default function BlogPage() {
             boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
             position: 'relative'
           }}>
-            {/* Close button */}
             <button
               onClick={handleClosePopup}
               style={{
@@ -535,7 +582,6 @@ export default function BlogPage() {
               <X size={24} />
             </button>
 
-            {/* Content */}
             <h3 style={{
               fontFamily: 'Georgia, serif',
               fontSize: '1.75rem',
