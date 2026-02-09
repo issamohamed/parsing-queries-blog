@@ -147,8 +147,61 @@ export default function BlogPage() {
       </div>
 
       <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-        {/* NEW Article - Price Personalization */}
+        {/* NEW Article - Online Advertising */}
         <article ref={firstArticleRef} style={{ marginBottom: '4rem' }}>
+          <h2 style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: 'clamp(3rem, 8vw, 5rem)',
+            color: 'white',
+            textAlign: 'center',
+            marginBottom: '1rem',
+            fontWeight: 400
+          }}>
+            Online Advertising: The Evolution of Intrusion and the Illusion of Value
+          </h2>
+          <div style={{
+            fontFamily: 'Georgia, serif',
+            textAlign: 'center',
+            color: 'rgba(255, 255, 255, 0.9)',
+            fontSize: '1.25rem',
+            marginBottom: '2rem'
+          }}>
+            February 2, 2026
+          </div>
+          <div style={{
+            backdropFilter: 'blur(12px)',
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '1rem',
+            padding: '2rem',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}>
+            <div style={{
+              color: 'rgba(255, 255, 255, 0.9)',
+              lineHeight: '1.75',
+              fontSize: '1.05rem'
+            }}>
+              <p style={{ marginBottom: '1rem' }}>
+                There's this peculiar relationship we've developed with online advertisements over the years, one that oscillates wildly between grudging acceptance and outright hostility, and what strikes me most is whether this tension is merely a byproduct of poor implementation or if it reveals something more fundamental about the incompatibility between what platforms need to survive and what users want from their digital experiences.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                When I trace the evolution of online ads from their earliest iterations, those garish, blinking banner ads of the late 1990s that felt more like digital billboards awkwardly transplanted onto web pages, to the sophisticated, algorithmically targeted content we encounter today that knows what we want before we've fully articulated it to ourselves, what strikes me most isn't just the technological advancement but the philosophical shift in how advertising positions itself within our online ecosystem. Those early banner ads were honest in their crudeness; they made no pretense about being anything other than what they were, interruptions to your browsing experience that you could easily ignore or click past without much thought. But somewhere along the timeline, as platforms realized that user attention had become the most valuable commodity in the digital economy, advertising evolved from an obvious intrusion into something far more insidious: content that masquerades as recommendation, as personalization, as the platform genuinely trying to show you things you might actually care about.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                This shift in presentation speaks to what I think is the central tension in modern online advertising, which is this fundamental clash between monetization as a business necessity and visibility as a user experience feature, where platforms have to somehow convince us that the ads we're seeing aren't just revenue generators for them but are actually valuable additions to our feeds, genuinely helpful suggestions that enhance rather than detract from our time online. And yet this tension becomes even more fraught when you consider the growing prevalence of ad blockers, which represent users taking control of their experience at the direct expense of web developers and content creators who rely on advertising revenue not just to profit but to keep their sites functional and continuously improving, creating this edge case where user empowerment becomes, from another angle, a form of freeloading that undermines the very ecosystem we claim to value. The narrative that's been carefully constructed around this is fascinating to me because it attempts to reframe something we inherently understand as a nuisance, being sold things we didn't ask for, as a service, a curation of products and experiences tailored specifically to our interests and needs. And the truly disorienting part is that sometimes this narrative actually holds true; sometimes an ad does introduce me to a product I genuinely needed or wanted, and in those moments, the line between exploitation and value becomes genuinely blurry, making me question whether my resistance to advertising is justified or if I'm simply being stubborn about accepting a system that, despite its flaws, occasionally works in my favor.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                But then I circle back to the methods employed to achieve this targeted relevance: the cookies tracking my every click, the data mining operations that build increasingly detailed profiles of who I am and what I want, the soft surveillance that feels less like a company trying to serve me better and more like an invasive observer cataloging my digital life for purposes I didn't consent to and don't fully understand, and I'm forced to confront the question of whether any amount of advertising relevance justifies these means. Because here's what troubles me most: even if we accept that targeted advertising can sometimes provide genuine value, that it can connect users with products they actually need and might never have discovered otherwise, we're still left with this uncomfortable reality that the infrastructure required to deliver that value is built on a foundation of data collection practices that most users don't truly understand and wouldn't agree to if they did, creating this bizarre situation where we've collectively traded our privacy for the convenience of not having to see ads for products we'd never buy, as if that were a fair exchange.
+              </p>
+              <p>
+                The question that looms largest for me is whether there's something fundamentally broken in a system where the only way to make digital platforms financially viable is through advertising models that require such extensive user surveillance, or if we've simply accepted this as the inevitable cost of "free" services without seriously questioning whether alternative models might exist. The evolution of online advertising hasn't just been about technological advancement; it's been about gradually normalizing increasingly invasive practices by dressing them up as features, as personalization, as platforms caring about our preferences, and I'm not sure we've collectively reckoned with what we've lost in that trade, or whether the value we've gained even begins to justify the means employed to deliver it.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        {/* Article - Price Personalization */}
+        <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
             fontSize: 'clamp(3rem, 8vw, 5rem)',
