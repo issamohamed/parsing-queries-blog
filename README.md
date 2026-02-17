@@ -1,7 +1,5 @@
 # Parsing Queries
 
-A personal blog exploring the intersection of technology, design, and human behavior.
-
 **Live site:** [issamohamed.com](https://issamohamed.com)
 
 ## About
