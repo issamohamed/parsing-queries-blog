@@ -82,7 +82,7 @@ export default function BlogPage() {
               background: 'rgba(255, 255, 255, 0.4)'
             }}></div>
           </div>
-
+          
           <div style={{
             display: 'flex',
             justifyContent: 'center',
@@ -132,8 +132,8 @@ export default function BlogPage() {
       <div style={{ height: '10rem' }}></div>
 
       <div style={{ maxWidth: '72rem', margin: '0 auto', marginBottom: '4rem', textAlign: 'center' }}>
-        <img
-          src="/images/blog_profile_pic.webp"
+        <img 
+          src="/images/blog_profile_pic.webp" 
           alt="Picture of the Author: Issa Mohamed"
           style={{
             width: '400px',
@@ -147,62 +147,8 @@ export default function BlogPage() {
       </div>
 
       <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-
-        {/* NEW Article - The Résumé Ouroboros */}
+        {/* NEW Article - Online Advertising */}
         <article ref={firstArticleRef} style={{ marginBottom: '4rem' }}>
-          <h2 style={{
-            fontFamily: 'Georgia, serif',
-            fontSize: 'clamp(3rem, 8vw, 5rem)',
-            color: 'white',
-            textAlign: 'center',
-            marginBottom: '1rem',
-            fontWeight: 400
-          }}>
-            The Résumé Ouroboros: How AI Recruiting Created a Loop Nobody Wins
-          </h2>
-          <div style={{
-            fontFamily: 'Georgia, serif',
-            textAlign: 'center',
-            color: 'rgba(255, 255, 255, 0.9)',
-            fontSize: '1.25rem',
-            marginBottom: '2rem'
-          }}>
-            March 4, 2026
-          </div>
-          <div style={{
-            backdropFilter: 'blur(12px)',
-            background: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '1rem',
-            padding: '2rem',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
-            border: '1px solid rgba(255, 255, 255, 0.2)'
-          }}>
-            <div style={{
-              color: 'rgba(255, 255, 255, 0.9)',
-              lineHeight: '1.75',
-              fontSize: '1.05rem'
-            }}>
-              <p style={{ marginBottom: '1rem' }}>
-                There's something almost darkly comedic about the current state of hiring, something I keep turning over in my mind whenever I think about what it must feel like to be a recruiter at a mid-sized company right now, sitting across a desk metaphorically piled floor-to-ceiling with applications and trying to locate, somewhere in that avalanche, the actual human being who would be genuinely good at this job; because what's happened in the labor market over the last few years isn't just a supply and demand problem, it's a cascading series of miscalculations and overcorrections that has somehow managed to make everyone involved worse off simultaneously, which is a feat of systemic dysfunction so complete it almost demands a kind of grudging respect.
-              </p>
-              <p style={{ marginBottom: '1rem' }}>
-                It starts, as most things do, at the top: the prestige employers, the brand-name companies that every ambitious graduate has been socialized since childhood to covet, have quietly erected walls around their hiring pipelines that are nearly impenetrable without an internal referral, a warm introduction, or the kind of implausible credential combination that asks you to have three years of professional experience in a tool that has existed for two. The résumé scanning algorithms these companies deploy aren't really screening for talent so much as they're screening for pattern-matching against a template of the last person who succeeded in the role, which means the process has a kind of circular logic built into its foundation, where the ideal candidate is essentially a statistical ghost assembled from past hires rather than a real person with a genuinely interesting or unconventional background. And the cruelest part of this system is its invisibility: you submit your application into what feels like a void, and the void occasionally sends back a politely worded email telling you it has decided to move forward with other candidates, without ever acknowledging that the void never actually looked at you to begin with.
-              </p>
-              <p style={{ marginBottom: '1rem' }}>
-                What happens next is where it gets genuinely interesting to me, because the predictable human response to that rejection is to recalibrate downward, to reason that if you can't get the big fish to respond, you'll cast your line somewhere more accessible, somewhere that still has humans making decisions; and so a massive, demoralized cohort of overqualified and underappreciated applicants begins redirecting its energy toward smaller companies, flooding their inboxes with applications in a volume those organizations were never built to handle. These smaller companies, faced suddenly with the same deluge the big players had been quietly managing with automation, arrive at the same conclusion: we need a filter. And so they build one, or license one, or bolt one onto their applicant tracking system, and suddenly the dynamic that drove applicants away from the prestige employers has metastasized into the very companies they fled toward.
-              </p>
-              <p style={{ marginBottom: '1rem' }}>
-                The applicant, catching on eventually because the rejection emails have that same automated coldness regardless of the company's size or logo, learns the lesson the hard way and begins adapting: studying which keywords seem to pass through the scanners, restructuring their experience into a particular syntax, importing the vocabulary of whatever role they're chasing until their résumé reads less like a document about a person and more like an SEO-optimized landing page for a human being. And what gets lost in that optimization process is precisely what would make a human recruiter pause and actually want to make a phone call: the idiosyncratic project that doesn't fit neatly into a bullet point, the unconventional career path that suggests genuine curiosity, the particular phrasing that tells you something real about how someone thinks.
-              </p>
-              <p>
-                What strikes me most when I sit with all of this is that we've constructed a hiring ecosystem where two different kinds of artificial intelligence are essentially negotiating with each other, the résumé-generating tools and the résumé-scanning tools locked in a kind of arms race, while the actual humans on both ends of the transaction, the recruiter who genuinely wants to find someone good and the applicant who genuinely wants to contribute something real, are increasingly spectators to a process that was ostensibly designed to serve them both.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        {/* Article - Online Advertising */}
-        <article style={{ marginBottom: '4rem' }}>
           <h2 style={{
             fontFamily: 'Georgia, serif',
             fontSize: 'clamp(3rem, 8vw, 5rem)',
@@ -354,7 +300,7 @@ export default function BlogPage() {
                 Social media platforms have discovered, often through spectacular public failures, that context is everything and context is precisely what AI struggles to grasp. The same words can be reclamation or slur depending on who's speaking, the same image can be documentation or glorification depending on intent, and the ever-evolving lexicon of hate, where communities develop shorthand, inside jokes, and coded language specifically designed to evade detection, means that any trained model is perpetually playing catch-up against human creativity deployed toward malicious ends. Reddit's approach of community-specific moderators acknowledges this reality, recognizing that someone embedded in a community can read the room in ways an algorithm simply cannot, but this solution introduces its own troubling questions: if moderators are anonymous participants in the communities they police, what prevents the fox from guarding the henhouse, what stops someone who shares a community's hateful beliefs from selectively enforcing rules to protect their ideological allies while punishing outsiders?
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                And this is where I find myself stuck in a loop of uncomfortable questions, because the alternative to trusting anonymous community moderators is to swing back toward automated systems that, when deployed too aggressively, end up punishing users who had no hateful intent whatsoever, people who used a word in a context the algorithm couldn't parse, who made a dark joke that landed wrong in the training data, who quoted something offensive in order to critique it and found themselves banned for the very content they were condemning. The brutality of automated moderation isn't just in what it misses but in how it overcorrects, how it flattens the rich, messy, context-dependent nature of human communication into a binary of "violation" or "not violation" without any of the nuance that a human reviewer, for all their psychological toll, would bring to the table.
+              And this is where I find myself stuck in a loop of uncomfortable questions, because the alternative to trusting anonymous community moderators is to swing back toward automated systems that, when deployed too aggressively, end up punishing users who had no hateful intent whatsoever, people who used a word in a context the algorithm couldn't parse, who made a dark joke that landed wrong in the training data, who quoted something offensive in order to critique it and found themselves banned for the very content they were condemning. The brutality of automated moderation isn't just in what it misses but in how it overcorrects, how it flattens the rich, messy, context-dependent nature of human communication into a binary of "violation" or "not violation" without any of the nuance that a human reviewer, for all their psychological toll, would bring to the table.
               </p>
               <p style={{ marginBottom: '1rem' }}>
                 What strikes me most when I sit with all of this is that we're essentially asking an impossible question: what does faithful and moral moderation even look like when the communities we're trying to moderate are as diverse and contradictory as communities in the physical world, where norms and culture and acceptable speech vary not just from country to country but from neighborhood to neighborhood, from friend group to friend group, from one corner of a subreddit to another? We want universal rules applied with contextual sensitivity, we want speed and scale without sacrificing accuracy, we want to protect users from harm without censoring legitimate expression, and we want all of this without destroying the mental health of the people tasked with making these judgment calls thousands of times a day.
@@ -711,7 +657,7 @@ export default function BlogPage() {
               gap: '1rem',
               flexWrap: 'wrap'
             }}>
-              
+              <a
                 href="https://groups.google.com/g/parsing_queries"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -741,7 +687,7 @@ export default function BlogPage() {
               >
                 Join Google Group
               </a>
-              
+              <a
                 href="https://substack.com/@issamohamed"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -768,8 +714,7 @@ export default function BlogPage() {
                   e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
-              >
-                Join my Substack
+              >Join my Substack
               </a>
             </div>
           </div>
